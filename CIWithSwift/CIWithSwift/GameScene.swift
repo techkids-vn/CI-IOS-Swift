@@ -17,19 +17,6 @@ class GameScene: SKScene {
         addPlane()
     }
     
-    func addBackground() {
-        let background = SKSpriteNode(imageNamed: "background.png")
-        background.anchorPoint = CGPointZero
-        background.position = CGPointZero
-        addChild(background)
-    }
-    
-    func addPlane() {
-        plane = SKSpriteNode(imageNamed: "plane.png")
-        plane.position = CGPoint(x: self.size.width / 2, y: plane.size.height / 2)
-        addChild(plane)
-    }
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Move the plane to the touch position immediately
         if let touch = touches.first {
@@ -48,5 +35,18 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         
+    }
+    
+    func addBackground() {
+        let background = SKSpriteNode(imageNamed: "background.png")
+        background.anchorPoint = CGPointZero
+        background.position = CGPointZero
+        addChild(background)
+    }
+    
+    func addPlane() {
+        plane = SKSpriteNode(imageNamed: "plane.png")
+        plane.position = CGPoint(x: self.size.width / 2, y: plane.size.height / 2)
+        addChild(plane)
     }
 }

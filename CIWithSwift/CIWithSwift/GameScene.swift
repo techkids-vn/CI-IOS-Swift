@@ -12,7 +12,7 @@ class GameScene: SKScene {
     
     var plane : SKSpriteNode!
     var planeDestination: CGPoint?
-    var planeSpeed : CGFloat = 10
+    var planeSpeed : CGFloat = 50
     var lastTimeUpdate : CFTimeInterval = -1
     
     override func didMoveToView(view: SKView) {
@@ -42,14 +42,27 @@ class GameScene: SKScene {
             let dt = currentTime - lastTimeUpdate
             print(dt * 1000)
             lastTimeUpdate = currentTime
-        }
-
-        //print("\(currentTime)")
-        if let dest = planeDestination {
-            let dx = dest.x - plane.position.x
-            let dy = dest.y - plane.position.y
-            let distance = sqrt(dx * dx + dy * dy)
-            let amountToMove = distance / planeSpeed
+            
+            // Check if the screen was touched or moved
+            if let dest = planeDestination {
+                // yes, move the plane to the touched position
+                
+                // 1 Calculate distance between the plane and the destination
+                let dx = dest.x - plane.position.x
+                let dy = dest.y - plane.position.y
+                let distance = sqrt(dx * dx + dy * dy)
+                
+                // 2. Calculate the ratio to know the amount to move in each coordinate
+                let ratio = distance / planeSpeed
+                // Check if the amount to move is smaller or larger than speed
+                if ratio > 1 {
+                    plane.position = plane.position.shift(dx / ratio, dy: dy / ratio)
+                } else {
+                    // The amount to move is smaller than speed, then move the plane to the destination and reset planeDestination
+                    plane.position = dest
+                    planeDestination = nil
+                }
+            }
         }
     }
     

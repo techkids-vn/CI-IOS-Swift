@@ -17,6 +17,7 @@
 		180B268B1D7869E0005B7DB8 /* enemy.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B26881D7869E0005B7DB8 /* enemy.png */; };
 		180B268C1D7869E0005B7DB8 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B26891D7869E0005B7DB8 /* plane.png */; };
 		180B268E1D786A59005B7DB8 /* 1945-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B268D1D786A59005B7DB8 /* 1945-logo.png */; };
+		180B26911D78A44F005B7DB8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B26901D78A44F005B7DB8 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		180B26881D7869E0005B7DB8 /* enemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy.png; sourceTree = "<group>"; };
 		180B26891D7869E0005B7DB8 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
 		180B268D1D786A59005B7DB8 /* 1945-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1945-logo.png"; sourceTree = "<group>"; };
+		180B26901D78A44F005B7DB8 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		180B266E1D786998005B7DB8 /* CIWithSwift */ = {
 			isa = PBXGroup;
 			children = (
+				180B268F1D78A43E005B7DB8 /* Utils */,
 				180B26851D7869BE005B7DB8 /* Assets */,
 				180B266F1D786998005B7DB8 /* AppDelegate.swift */,
 				180B26731D786998005B7DB8 /* GameScene.swift */,
@@ -93,6 +96,14 @@
 				180B268D1D786A59005B7DB8 /* 1945-logo.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		180B268F1D78A43E005B7DB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				180B26901D78A44F005B7DB8 /* Utils.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				180B26741D786998005B7DB8 /* GameScene.swift in Sources */,
 				180B26761D786998005B7DB8 /* GameViewController.swift in Sources */,
 				180B26701D786998005B7DB8 /* AppDelegate.swift in Sources */,
+				180B26911D78A44F005B7DB8 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +338,7 @@
 				180B26841D786998005B7DB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

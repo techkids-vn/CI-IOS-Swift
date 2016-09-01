@@ -9,16 +9,24 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
     var plane : SKSpriteNode!
+    
     override func didMoveToView(view: SKView) {
+        addBackground()
+        addPlane()
+    }
+    
+    func addBackground() {
         let background = SKSpriteNode(imageNamed: "background.png")
         background.anchorPoint = CGPointZero
         background.position = CGPointZero
-        
+        addChild(background)
+    }
+    
+    func addPlane() {
         plane = SKSpriteNode(imageNamed: "plane.png")
         plane.position = CGPoint(x: self.size.width / 2, y: plane.size.height / 2)
-        
-        addChild(background)
         addChild(plane)
     }
     
@@ -38,7 +46,6 @@ class GameScene: SKScene {
         }
     }
     
-   
     override func update(currentTime: CFTimeInterval) {
         
     }

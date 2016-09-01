@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180B265E1D780A90005B7DB8 /* plane1.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B265D1D780A90005B7DB8 /* plane1.png */; };
+		180B26611D78309C005B7DB8 /* ExplosionParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 180B265F1D78309C005B7DB8 /* ExplosionParticle.sks */; };
+		180B26621D78309C005B7DB8 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 180B26601D78309C005B7DB8 /* spark.png */; };
+		1882044C1D76F2490090B3BF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882044B1D76F2490090B3BF /* Utils.swift */; };
 		188C67FE1D7036CC008771B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C67FD1D7036CC008771B3 /* AppDelegate.swift */; };
 		188C68021D7036CC008771B3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C68011D7036CC008771B3 /* GameScene.swift */; };
 		188C68041D7036CC008771B3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188C68031D7036CC008771B3 /* GameViewController.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180B265D1D780A90005B7DB8 /* plane1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane1.png; sourceTree = "<group>"; };
+		180B265F1D78309C005B7DB8 /* ExplosionParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ExplosionParticle.sks; sourceTree = "<group>"; };
+		180B26601D78309C005B7DB8 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		1882044B1D76F2490090B3BF /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		188C67FA1D7036CC008771B3 /* StudySpriteKit1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudySpriteKit1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188C67FD1D7036CC008771B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188C68011D7036CC008771B3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -74,6 +82,9 @@
 				188C68081D7036CC008771B3 /* Assets.xcassets */,
 				188C680A1D7036CC008771B3 /* LaunchScreen.storyboard */,
 				188C680D1D7036CC008771B3 /* Info.plist */,
+				1882044B1D76F2490090B3BF /* Utils.swift */,
+				180B265F1D78309C005B7DB8 /* ExplosionParticle.sks */,
+				180B26601D78309C005B7DB8 /* spark.png */,
 			);
 			path = StudySpriteKit1;
 			sourceTree = "<group>";
@@ -84,6 +95,7 @@
 				188C683A1D727600008771B3 /* bullet.png */,
 				188C68381D726F5C008771B3 /* background.png */,
 				188C68321D726AFD008771B3 /* plane3.png */,
+				180B265D1D780A90005B7DB8 /* plane1.png */,
 				188C68341D726C85008771B3 /* techkids-logo.png */,
 				188C68361D726D58008771B3 /* 1945-logo.png */,
 			);
@@ -149,12 +161,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180B26621D78309C005B7DB8 /* spark.png in Resources */,
 				188C68331D726AFD008771B3 /* plane3.png in Resources */,
+				180B265E1D780A90005B7DB8 /* plane1.png in Resources */,
 				188C68371D726D58008771B3 /* 1945-logo.png in Resources */,
 				188C68391D726F5C008771B3 /* background.png in Resources */,
 				188C680C1D7036CC008771B3 /* LaunchScreen.storyboard in Resources */,
 				188C68091D7036CC008771B3 /* Assets.xcassets in Resources */,
 				188C683B1D727600008771B3 /* bullet.png in Resources */,
+				180B26611D78309C005B7DB8 /* ExplosionParticle.sks in Resources */,
 				188C68351D726C85008771B3 /* techkids-logo.png in Resources */,
 				188C68071D7036CC008771B3 /* Main.storyboard in Resources */,
 			);
@@ -170,6 +185,7 @@
 				188C68021D7036CC008771B3 /* GameScene.swift in Sources */,
 				188C68041D7036CC008771B3 /* GameViewController.swift in Sources */,
 				188C67FE1D7036CC008771B3 /* AppDelegate.swift in Sources */,
+				1882044C1D76F2490090B3BF /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +343,7 @@
 				188C68121D7036CC008771B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

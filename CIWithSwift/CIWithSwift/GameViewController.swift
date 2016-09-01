@@ -13,12 +13,15 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         // 1 Cast view into SKView
+        print("1")
         let skView = self.view as! SKView
         
         // 2 Create GameScene
+        print("2")
         let gameScence = GameScene(size: skView.frame.size)
         
         // 3 Present sence
+        print("3")
         skView.presentScene(gameScence)
         
         super.viewDidLoad()

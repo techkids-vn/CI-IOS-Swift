@@ -11,8 +11,12 @@ import SpriteKit
 class GameScene: SKScene {
     
     var plane : SKSpriteNode!
+    var planeDestination: CGPoint?
+    var planeSpeed : CGFloat = 10
+    var lastTimeUpdate : CFTimeInterval = -1
     
     override func didMoveToView(view: SKView) {
+        print("Did move to view")
         addBackground()
         addPlane()
     }
@@ -20,21 +24,33 @@ class GameScene: SKScene {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Move the plane to the touch position immediately
         if let touch = touches.first {
-            let touchPosition = touch.locationInNode(self)
-            plane.position = touchPosition
+            planeDestination = touch.locationInNode(self)
         }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         // Move the plane to the touch position immediately
         if let touch = touches.first {
-            let touchPosition = touch.locationInNode(self)
-            plane.position = touchPosition
+            planeDestination = touch.locationInNode(self)
         }
     }
     
     override func update(currentTime: CFTimeInterval) {
-        
+        if lastTimeUpdate == -1 {
+            lastTimeUpdate = currentTime
+        } else {
+            let dt = currentTime - lastTimeUpdate
+            print(dt * 1000)
+            lastTimeUpdate = currentTime
+        }
+
+        //print("\(currentTime)")
+        if let dest = planeDestination {
+            let dx = dest.x - plane.position.x
+            let dy = dest.y - plane.position.y
+            let distance = sqrt(dx * dx + dy * dy)
+            let amountToMove = distance / planeSpeed
+        }
     }
     
     func addBackground() {
